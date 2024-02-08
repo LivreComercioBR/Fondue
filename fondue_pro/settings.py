@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'fondue_app',
     'admin_object_actions',
     'produto',
+    'pedido',
 ]
 
 MIDDLEWARE = [
