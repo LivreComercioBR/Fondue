@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fondue_app',
     'admin_object_actions',
+    'produto',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+
+            'libraries': {
+                'filtros': 'produto.templatestags.filtros',
+
+            },
         },
     },
 ]
@@ -128,7 +134,7 @@ STATIC_ROOT = os.path.join('static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Session dos usuário
+# Session do usuário
 
 SESSION_COOKIE_AGE = 60*60*24*7
 
