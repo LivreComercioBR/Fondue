@@ -42,7 +42,10 @@ class User(AbstractUser, BaseUserManager):
     cep = models.ManyToManyField(Cep)
     bairro = models.ManyToManyField(Bairro)
     cidade = models.ManyToManyField(Cidade)
+    ponto_referencia = models.CharField(
+        max_length=256, null=True, blank=True, )
     data_nascimento = models.DateField(default=None, blank=True, null=True)
+    telefone = models.CharField(max_length=20, blank=True, null=True)
 
     def __str__(self) -> str:
         return self.username
